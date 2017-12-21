@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/app/book")
 @CrossOrigin(origins = "http://localhost:3000")
 public class BookController {
 	@Autowired

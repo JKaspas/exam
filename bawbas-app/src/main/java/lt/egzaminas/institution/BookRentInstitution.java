@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "rent")
-public class BookRentInstitution {
+public class BookRentInstitution extends Institution {
 
 	private boolean isOld; // old / new books
 

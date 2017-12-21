@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "shop")
-public class BookShopInstitution {
+public class BookShopInstitution extends Institution {
 
 	private boolean isForAdult; // for adult or child
 

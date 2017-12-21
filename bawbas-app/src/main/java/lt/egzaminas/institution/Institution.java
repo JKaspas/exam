@@ -24,7 +24,7 @@ import lt.egzaminas.book.Book;
 @JsonSubTypes({ @JsonSubTypes.Type(value = ArchiveInstitution.class, name = "archive"),
 		@JsonSubTypes.Type(value = BookRentInstitution.class, name = "rent"),
 		@JsonSubTypes.Type(value = BookShopInstitution.class, name = "shop"),
-		@JsonSubTypes.Type(value = BookShopInstitution.class, name = "library") })
+		@JsonSubTypes.Type(value = LibraryInstitution.class, name = "library") })
 public abstract class Institution {
 	@Id
 	@GeneratedValue
@@ -32,7 +32,7 @@ public abstract class Institution {
 	private String name;
 	private String city;
 	private String image;
-	private boolean category; // government or private
+	private boolean isPrivate; // government or private
 
 	@ManyToMany
 	@JoinTable(name = "institution_book", joinColumns = @JoinColumn(name = "institution_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"))
@@ -86,12 +86,12 @@ public abstract class Institution {
 		this.image = image;
 	}
 
-	public boolean isCategory() {
-		return category;
+	public boolean isPrivate() {
+		return isPrivate;
 	}
 
-	public void setCategory(boolean category) {
-		this.category = category;
+	public void setPrivate(boolean isPrivate) {
+		this.isPrivate = isPrivate;
 	}
 
 }

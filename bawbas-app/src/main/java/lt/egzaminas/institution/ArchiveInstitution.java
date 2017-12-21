@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "archive")
-public class ArchiveInstitution {
-	
+public class ArchiveInstitution extends Institution {
+
 	private boolean isPublic; // public or private
 
 	public boolean isPublic() {
