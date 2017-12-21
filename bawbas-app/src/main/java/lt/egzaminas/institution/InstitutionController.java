@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/app/")
+@RequestMapping("/api/")
 @CrossOrigin(origins = "http://localhost:3000")
 public class InstitutionController {
 	@Autowired
